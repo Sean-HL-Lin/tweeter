@@ -1,0 +1,31 @@
+header {
+  height: 400px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 120px;
+  background-color: #00abab;
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+  padding-top: 15px;
+}
+
+#avatar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+#user {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 150%);
+  color:rgba(255, 99, 71, 0.9);
+}
+
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+}
