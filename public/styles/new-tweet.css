@@ -11,7 +11,15 @@
 
 .new-tweet form {
   width: 100%;
+}
+
+.new-tweet {
+  display: none;
   font-family: 'Bungee', sans-serif;
+}
+
+.show-form {
+  display: block;
 }
 
 .new-tweet input {
@@ -21,4 +29,47 @@
 
 .new-tweet span {
   float: right;
+}
+
+#tweets-container {
+  margin-top: 100px
+}
+
+
+#tweets-container .tweet {
+  border: solid 5px #575757;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+
+#tweets-container .tweet p {
+  padding-bottom: 30px;
+  border-bottom: solid 5px #575757;
+}
+
+
+.tweet:hover {
+  box-shadow: 10px 10px #ccc2c2;
+}
+
+
+.tweet header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet p {
+  text-align: center;
+}
+
+#error-message {
+  border: solid rgb(224, 64, 64) 5px;
+  margin-bottom: 30px;
+  display: none;
+}
+
+#error-message p {
+  color: rgb(224, 64, 64);
+  padding-left: 10px;
 }

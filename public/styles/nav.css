@@ -1,11 +1,44 @@
 
 nav {
-  font-family: 'Bungee', sans-serif;
   height: 120px;
   width: 100%;
   z-index: 1;
   position: fixed;
   background-color: #4056A1;
   color: #FFFFFF;
-  padding: 1.5em
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+
+#brand {
+  font-family: 'Bungee', sans-serif;
+}
+
+#write-tweet {
+  text-align: center;
+}
+
+#write-tweet p {
+  margin: 5px;
+}
+
+@keyframes floating {
+  0% {top:0px}
+  50% {top:3px}
+  100% {top:0px}
+}
+
+
+
+#write-tweet a {
+  position: relative;
+  color: rgb(230, 111, 31);
+  animation-name: floating;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+

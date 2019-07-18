@@ -1,8 +1,8 @@
-header {
+#page-header {
   height: 400px;
   width: 100%;
-  position: fixed;
-  z-index: 1;
+  position: relative;
+  z-index: 0;
   top: 120px;
   background-color: #00abab;
   background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
@@ -20,8 +20,9 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 150%);
-  color:rgba(255, 99, 71, 0.9);
+  transform: translate(-50%, 90%);
+  color:#FFFFFF;
+  font-size: 35px;
 }
 
 
