@@ -4,7 +4,7 @@ nav {
   width: 100%;
   z-index: 1;
   position: fixed;
-  background-color: #4056A1;
+  background-color: #F57C00;
   color: #FFFFFF;
   padding: 1.5em;
   display: flex;
@@ -35,7 +35,7 @@ nav {
 
 #write-tweet a {
   position: relative;
-  color: rgb(230, 111, 31);
+  color: #448AFF;
   animation-name: floating;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;

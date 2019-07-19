@@ -6,14 +6,28 @@ $(document).ready(function() {
     let counterObj = $(this).parent().children('span');
     let limit = 140;
     counterObj.text(() => {
-      let rest =  limit - count;
-      if (rest < 0 ) {
-        counterObj.css('color', 'red')
+      let rest = limit - count;
+      if (rest < 0) {
+        counterObj.css('color', 'red');
       }
       return limit - count;
-    })
+    });
+  });
 
+  $(window).scroll(() => {
+    if ($('header').visible()) {
+      $('#to-top').css('display', 'none');
+      $('#write-tweet').css('display', 'block');
+    } else {
+      $('#to-top').css('display', 'inline');
+      $('#write-tweet').css('display', 'none');
+    }
+  });
 
-  })
+  $('#to-top').click(() => {
+    $('.new-tweet').slideDown();
+    $('.new-tweet textarea').focus();
+  });
+
 
 });

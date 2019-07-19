@@ -31,3 +31,25 @@ body {
    padding-top: 150px;
    background-color: #f4f1ec;
  }
+
+@keyframes floating-to-top {
+  0% {top:90%}
+  50% {top:89%}
+  100% {top:90%}
+}
+
+#to-top {
+  display: none;
+  font-size: 70px;
+  position: fixed;
+  top:90%;
+  left: 93%;
+  color: #448AFF;
+}
+
+#to-top:hover {
+  animation-name: floating-to-top;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
