@@ -16,3 +16,9 @@ Tweeter is a simple, single-page AJAX-based Twitter clone that uses jQuery, HTML
 - Node 5.10.x or above
 - body-parser
 - chance
+
+
+## Screenshots
+
+!["Screenshot- desktop"](https://github.com/Sean-HL-Lin/tweeter/blob/master/doc/responsive-desktop.png)
+!["Screenshot- mobile"](https://github.com/Sean-HL-Lin/tweeter/blob/master/doc/responsive-mobile%20device.png)
