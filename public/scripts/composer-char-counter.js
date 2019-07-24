@@ -2,11 +2,11 @@ $(document).ready(function() {
   // --- our code goes here ---
 
   $('.new-tweet textarea').on('keyup', function() {
-    let count = $(this).val().length;
-    let counterObj = $(this).parent().children('span');
-    let limit = 140;
+    const count = $(this).val().length;
+    const counterObj = $(this).parent().children('span');
+    const limit = 140;
     counterObj.text(() => {
-      let rest = limit - count;
+      const rest = limit - count;
       if (rest < 0) {
         counterObj.css('color', 'red');
       }

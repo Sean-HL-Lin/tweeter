@@ -6,7 +6,6 @@
 
 $(document).ready(function() {
   // --- our code goes here ---
-
   const createTweetElement = function(data) {
     const markup = `          
       <header>
@@ -18,8 +17,8 @@ $(document).ready(function() {
       </header>
       <p>${escape(data.content.text)}</p>
       <footer>
-        <span>${escape(new Date(data.created_at))}</span>
-        <span>
+        <span>${escape(moment(new Date(data.created_at)).fromNow())}</span>
+        <span class= 'icons'>
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>
           <i class="fas fa-heart"></i>
@@ -41,7 +40,7 @@ $(document).ready(function() {
   const renderTweets = function(data) {
     $('#tweets-container').empty();
     for (let item of data) {
-      $('#tweets-container').append(createTweetElement(item));
+      $('#tweets-container').prepend(createTweetElement(item));
     }
   };
 
@@ -92,6 +91,8 @@ $(document).ready(function() {
 
   //toggle new tweet
   $('#write-tweet a').click((event) => {
+    console.log(event)
+    console.log('yes');
     event.preventDefault();
     $('.new-tweet').slideToggle();
     $('.new-tweet textarea').focus();

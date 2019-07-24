@@ -85,3 +85,11 @@
 .tweet footer i:hover{
   color:  rgb(43, 160, 238)
 }
+
+.icons {
+  opacity: 0;
+}
+
+.icons:hover {
+  opacity: 1;
+}
