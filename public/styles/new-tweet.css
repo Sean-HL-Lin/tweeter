@@ -94,3 +94,7 @@
 .tweet:hover .icons {
   opacity: 1;
 }
+
+.show-tweet-form {
+  display: none !important;
+}

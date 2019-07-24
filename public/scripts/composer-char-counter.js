@@ -16,11 +16,11 @@ $(document).ready(function() {
 
   $(window).scroll(() => {
     if ($('header').visible()) {
-      $('#to-top').css('display', 'none');
-      $('#write-tweet').css('display', 'block');
+      $('#to-top').removeClass('display-to-top');
+      $('#write-tweet').removeClass('show-tweet-form');
     } else {
-      $('#to-top').css('display', 'inline');
-      $('#write-tweet').css('display', 'none');
+      $('#to-top').addClass('display-to-top');
+      $('#write-tweet').addClass('show-tweet-form');
     }
   });
 

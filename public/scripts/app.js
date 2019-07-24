@@ -1,23 +1,25 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
 
 $(document).ready(function() {
-  // --- our code goes here ---
+
+    // remove insecure text
+    const RemoveIllegalInput = function(str) {
+      const div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
+
   const createTweetElement = function(data) {
     const markup = `          
       <header>
         <span>
-        <img src="${escape(data.user.avatars)}">
-        <span>${escape(data.user.name)}</span>
+        <img src="${RemoveIllegalInput(data.user.avatars)}">
+        <span>${RemoveIllegalInput(data.user.name)}</span>
         </span>
-        <span>${escape(data.user.handle)}</span>
+        <span>${RemoveIllegalInput(data.user.handle)}</span>
       </header>
-      <p>${escape(data.content.text)}</p>
+      <p>${RemoveIllegalInput(data.content.text)}</p>
       <footer>
-        <span>${escape(moment(new Date(data.created_at)).fromNow())}</span>
+        <span>${RemoveIllegalInput(moment(new Date(data.created_at)).fromNow())}</span>
         <span class= 'icons'>
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>
@@ -29,12 +31,6 @@ $(document).ready(function() {
     return tweet;
   };
 
-  // remove insecure text
-  const escape = function(str) {
-    let div = document.createElement('div');
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  };
 
   // renderTweets(data)
   const renderTweets = function(data) {
@@ -45,12 +41,16 @@ $(document).ready(function() {
   };
 
 
-  //load tweets  function
+  //get tweets from database
   const loadTweets = function() {
     $.get('/tweets', (data) => {
       renderTweets(data);
     });
   };
+
+
+  loadTweets();
+
 
 
   const editErrorMessage = function(message) {
@@ -86,13 +86,9 @@ $(document).ready(function() {
     }
   });
 
-  loadTweets();
-
 
   //toggle new tweet
   $('#write-tweet a').click((event) => {
-    console.log(event)
-    console.log('yes');
     event.preventDefault();
     $('.new-tweet').slideToggle();
     $('.new-tweet textarea').focus();
