@@ -52,6 +52,7 @@
 
 .tweet:hover {
   box-shadow: 10px 10px #ccc2c2;
+
 }
 
 
@@ -90,6 +91,6 @@
   opacity: 0;
 }
 
-.icons:hover {
+.tweet:hover .icons {
   opacity: 1;
 }
